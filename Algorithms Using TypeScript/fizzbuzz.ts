@@ -6,14 +6,31 @@ For multiples of both 3 and 5, print FizzBuzz
 */
 
 
-for (var index = 1; index <= 100; index ++) {
-  if (index % 15 == 0) {
-    console.log ("FizzBuzz");
-  } else if (index % 5 == 0) {
-    console.log("Buzz") ;
-  } else if (index % 3 == 0) {
-    console.log( "Fizz");
-  } else {
-    console.log(index);
-  }
+for (var index = 1; index <= 100; index++) {
+    if (index % 15 == 0) {
+        console.log("FizzBuzz");
+    } else if (index % 5 == 0) {
+        console.log("Buzz");
+    } else if (index % 3 == 0) {
+        console.log("Fizz");
+    } else {
+        console.log(index);
+    }
+}
+
+
+for (let index = 1; index <= 100; index++) {
+
+    const isFizz = index % 3 === 0;
+    const isBuzz = index % 5 === 0;
+
+    const result =
+        isFizz && isBuzz
+            ? "FizzBuzz"
+            : (isBuzz)
+                ? "Buzz"
+                : (isFizz)
+                    ? "Fizz"
+                    : index;
+    console.log(result);
 }
